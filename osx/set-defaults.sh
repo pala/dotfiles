@@ -24,6 +24,7 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
+# via http://git.io/1pS-2g
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -41,7 +42,7 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
-# Bottom left Corner → Screensaver.
+# Bottom left Corner → Put display to sleep
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
