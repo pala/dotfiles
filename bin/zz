@@ -3,10 +3,19 @@
 # 为革命 保护视力
 # http://ztpala.com/2014/03/25/mac-os-x-command-line-timer-notification/
 
-if [ "$1" = "" ]
-  then sleep 1200;
-else
-  sleep $(($1 * 60));
-fi
-osascript -e 'display notification "赶快走开" with title "休息时间" sound name "Sosumi"'
+display_notification () {
+  osascript -e 'display notification "赶快走开" with title "休息时间" sound name "Sosumi"'
+}
+
 # sound names: ls /System/Library/Sounds or 'default'
+
+if [ "$1" = "" ]
+  then
+    while [[ true ]]; do
+      sleep 1230
+      display_notification
+    done
+else
+  sleep $(($1 * 60))
+  display_notification
+fi
