@@ -14,7 +14,7 @@ if [ "$1" = "" ]
     trap "exit" INT
     # http://unix.stackexchange.com/questions/48425/how-to-stop-the-loop-bash-script-in-terminal
     while [[ true ]]; do
-      sleep 2700
+      sleep 1200
       display_notification
     done
 else
