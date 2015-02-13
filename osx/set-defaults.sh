@@ -48,3 +48,5 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Disable screenshot shadow
 defaults write com.apple.screencapture disable-shadow -bool true
+
+defaults write -g ApplePressAndHoldEnabled -bool false
