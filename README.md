@@ -21,6 +21,8 @@ Run this:
 ```sh
 git clone https://github.com/holman/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
+script/install
+brew install zsh
 script/bootstrap
 ```
 
