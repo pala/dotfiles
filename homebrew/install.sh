@@ -10,7 +10,6 @@ if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
 
-<<<<<<< HEAD
   # Install the correct homebrew for each OS type
   if test "$(uname)" = "Darwin"
   then
@@ -21,9 +20,5 @@ then
   fi
 
 fi
-=======
-# Install homebrew packages
-brew install grc coreutils
->>>>>>> 8664c78c1b435178cb00536eadbdca15e2dbb76e
 
 exit 0
