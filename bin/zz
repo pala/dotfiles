@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# 为革命 保护视力
+# http://ztpala.com/2014/03/25/mac-os-x-command-line-timer-notification/
+
+display_notification () {
+  osascript -e 'display notification "赶快走开" with title "休息时间" sound name "Sosumi"'
+}
+
+# sound names: ls /System/Library/Sounds or 'default'
+
+if [ "$1" = "" ]
+  then
+    trap "exit" INT
+    # http://unix.stackexchange.com/questions/48425/how-to-stop-the-loop-bash-script-in-terminal
+    while [[ true ]]; do
+      sleep 1200
+      display_notification
+    done
+else
+  sleep $(($1 * 60))
+  display_notification
+fi
